@@ -13,6 +13,15 @@ internal class Musica
     public int Duracao { get; set; }
     [JsonPropertyName("genre")]
     public string? Genero { get; set; }
+    [JsonPropertyName("year")]
+    public String? AnoString { get; set; }
+    public int Ano
+    {
+        get
+        {
+            return int.Parse(AnoString!);
+        }
+    }
 
     public void ExibirDetalheDaMusica()
     {
@@ -20,5 +29,6 @@ internal class Musica
         Console.WriteLine($"Musica: {Nome}");
         Console.WriteLine($"Duração em segundo: {Duracao/1000}");
         Console.WriteLine($"Genero: {Genero}");
+        Console.WriteLine($"Ano: {Ano}");
     }
 }

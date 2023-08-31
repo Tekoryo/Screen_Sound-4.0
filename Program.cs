@@ -2,16 +2,6 @@
 using Screen_Sound_4._0.Filtro;
 using System.Text.Json;
 
-/*
- Exibir todos os gêneros musicais da lista; x
-
-Ordenar os artistas por nome; x
-
-Filtrar artistas por gênero musical;
-
-Filtrar as músicas de um artista.
- */
-
 using (HttpClient client = new HttpClient())
 {
     try
@@ -22,7 +12,8 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarTodosOsGenerosMusicas(musicas);
         //LinqOrder.ExibirArtistasEmOrdem(musicas);
         //LinqFilter.FiltrarArtistaPorGenerosMusicas(musicas, "rock");
-        LinqFilter.FiltrarMusicasDeUmArtista(musicas, "U2");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "U2");
+        LinqFilter.FiltrarMusicasPorAno(musicas, 2012);
     }
     catch (Exception ex)
     {
